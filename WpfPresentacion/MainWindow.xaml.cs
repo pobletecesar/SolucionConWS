@@ -56,6 +56,8 @@ namespace WpfPresentacion
 
                 List<Post> lPost = (List<Post>)xmlSerial.Deserialize(xmlRead);
 
+
+                ///CREACION DE PAGINA PDF
                 var pdfDoc = new Document(PageSize.LETTER, 40f, 40f, 60f, 60f);
                 string path = $"C://PDFs//report{DateTime.Now.ToString("yyyyMMddHHmmss")}.pdf";
                 PdfWriter.GetInstance(pdfDoc,new FileStream(path,FileMode.OpenOrCreate));
