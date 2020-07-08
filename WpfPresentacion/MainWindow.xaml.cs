@@ -124,6 +124,9 @@ namespace WpfPresentacion
                 mail.To.Add("c.pobletes@profesor.duoc.cl");
                 mail.To.Add("dieg.mirandam@alumnos.duoc.cl");
                 mail.To.Add("joa.silvas@alumnos.duoc.cl");
+                
+                mail.To.Add("joa.silvas@alumnos.duoc.cl");
+                
                 mail.Subject = "REPORTE BLOG";
                 mail.Body = "Adjuntamos reporte del blog";
 
