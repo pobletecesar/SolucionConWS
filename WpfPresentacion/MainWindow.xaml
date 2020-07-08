@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfPresentacion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPresentacion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgListPost" HorizontalAlignment="Left" Height="167" Margin="10,214,0,0" VerticalAlignment="Top" Width="774" AutoGenerateColumns="False" SelectionChanged="DgListPost_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id_post}" Header="Id"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding titulo_post}" Header="Título"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding texto_post}" Header="Texto"></DataGridTextColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="label" Content="Título" HorizontalAlignment="Left" Margin="5,31,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" Height="23" Margin="86,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="322"/>
+        <Label x:Name="label1" Content="Texto" HorizontalAlignment="Left" Margin="5,60,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPost" HorizontalAlignment="Left" Height="123" Margin="86,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="322" MaxLines="5"/>
+        <Button x:Name="btnGrabar" Content="Grabar" HorizontalAlignment="Left" Margin="458,27,0,0" VerticalAlignment="Top" Width="75" Click="BtnGrabar_Click"/>
+        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="458,67,0,0" VerticalAlignment="Top" Width="75" Click="BtnModificar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="458,105,0,0" VerticalAlignment="Top" Width="75" Click="BtnEliminar_Click"/>
+        <Label x:Name="label2" Content="ID" HorizontalAlignment="Left" Margin="7,0,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="23" Margin="86,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" IsEnabled="False"/>
+        <Button x:Name="btnPDF" Content="Exportar PDF" HorizontalAlignment="Left" Margin="458,129,0,0" VerticalAlignment="Top" Width="75" Height="26" Click="BtnPDF_Click"/>
+        <Button x:Name="btnEnviar" Content="Enviar Reporte" HorizontalAlignment="Left" Margin="458,173,0,0" VerticalAlignment="Top" Width="91" Click="BtnEnviar_Click"/>
+        <Label x:Name="lblReporte" Content="Seleccione Reporte" HorizontalAlignment="Left" Margin="587,21,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <ComboBox x:Name="cboReporte" HorizontalAlignment="Left" Margin="597,59,0,0" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Button x:Name="btnMail" Content="Enviar" HorizontalAlignment="Left" Margin="620,100,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden" Click="BtnMail_Click"/>
+
+    </Grid>
+</Window>
